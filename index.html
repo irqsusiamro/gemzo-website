@@ -1,0 +1,274 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>جمزو لتأجير السيارات | رام الله</title>
+  <meta name="description" content="Gemzo Car Rental - premium car rental in Ramallah, Palestine. Luxury, SUV and economy cars at affordable daily prices. Book on WhatsApp.">
+  <link rel="icon" type="image/png" href="images/favicon.png">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&family=Cairo:wght@400;600;700;800&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+
+  <!-- ===== Header ===== -->
+  <header class="header" id="header">
+    <div class="container header-inner">
+      <a href="#home" class="brand" aria-label="Gemzo Car Rental">
+        <img src="images/logo-mark.png" alt="Gemzo Car Rental logo" class="brand-logo">
+        <span class="brand-text">
+          <span class="brand-name">GEMZO</span>
+          <span class="brand-sub">جمزو لتأجير السيارات</span>
+        </span>
+      </a>
+
+      <nav class="nav" id="nav">
+        <a href="#home" class="nav-link active" data-i18n="nav.home">Home</a>
+        <a href="#fleet" class="nav-link" data-i18n="nav.fleet">Fleet</a>
+        <a href="#about" class="nav-link" data-i18n="nav.about">About</a>
+        <a href="#booking" class="nav-link" data-i18n="nav.booking">Booking</a>
+        <a href="#contact" class="nav-link" data-i18n="nav.contact">Contact</a>
+        <a href="#faq" class="nav-link" data-i18n="nav.faq">FAQ</a>
+        <button class="lang-toggle" id="langToggle" type="button" aria-label="Switch language">EN</button>
+      </nav>
+
+      <button class="menu-btn" id="menuBtn" type="button" aria-label="Open menu" aria-expanded="false">
+        <span></span><span></span><span></span>
+      </button>
+    </div>
+  </header>
+
+  <!-- ===== Hero ===== -->
+  <section class="hero" id="home">
+    <div class="hero-bg"></div>
+    <div class="hero-overlay"></div>
+    <div class="container hero-content">
+      <h1 class="hero-title">
+        <span data-i18n="hero.title1">Drive With</span>
+        <span class="accent" data-i18n="hero.title2">Luxury &amp; Confidence</span>
+      </h1>
+      <p class="hero-text" data-i18n="hero.text">Premium car rental services in Ramallah with affordable prices and exceptional customer service.</p>
+      <div class="hero-actions">
+        <a href="#booking" class="btn btn-primary" data-i18n="hero.book">Book Now</a>
+        <a href="https://wa.me/970595552277" target="_blank" rel="noopener" class="btn btn-outline" data-i18n="hero.whatsapp">WhatsApp Us</a>
+      </div>
+    </div>
+    <a href="#fleet" class="scroll-hint" aria-label="Scroll down"><span></span></a>
+  </section>
+
+  <!-- ===== Highlights strip ===== -->
+  <section class="highlights">
+    <div class="container highlights-grid">
+      <div class="highlight">
+        <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M12 2 4 5v6c0 5 3.4 9.7 8 11 4.6-1.3 8-6 8-11V5l-8-3Z"/><path d="m9 12 2 2 4-4"/></svg>
+        <div><strong data-i18n="hl.1t">Full Insurance</strong><span data-i18n="hl.1d">Every car is insured and licensed</span></div>
+      </div>
+      <div class="highlight">
+        <svg viewBox="0 0 24 24" aria-hidden="true"><circle cx="12" cy="12" r="9"/><path d="M12 7v5l3 2"/></svg>
+        <div><strong data-i18n="hl.2t">24/7 Support</strong><span data-i18n="hl.2d">We answer on WhatsApp any time</span></div>
+      </div>
+      <div class="highlight">
+        <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M3 12h18M3 6h18M3 18h12"/></svg>
+        <div><strong data-i18n="hl.3t">Best Prices</strong><span data-i18n="hl.3d">Daily, weekly and monthly offers</span></div>
+      </div>
+      <div class="highlight">
+        <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M12 21s-7-6.2-7-11a7 7 0 0 1 14 0c0 4.8-7 11-7 11Z"/><circle cx="12" cy="10" r="2.5"/></svg>
+        <div><strong data-i18n="hl.4t">Fast Booking</strong><span data-i18n="hl.4d">Book in minutes on WhatsApp</span></div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ===== Fleet ===== -->
+  <section class="section" id="fleet">
+    <div class="container">
+      <div class="section-head">
+        <div>
+          <h2 class="section-title" data-i18n="fleet.title">Premium Fleet</h2>
+          <p class="section-sub" data-i18n="fleet.sub">Choose the car that fits your trip, from economy to full luxury.</p>
+        </div>
+        <div class="filters" id="filters">
+          <button class="filter active" data-filter="all" data-i18n="fleet.all">All</button>
+          <button class="filter" data-filter="suv" data-i18n="cat.suv">SUV</button>
+          <button class="filter" data-filter="convertible" data-i18n="cat.convertible">Convertible</button>
+          <button class="filter" data-filter="sedan" data-i18n="cat.sedan">Sedan</button>
+        </div>
+      </div>
+      <div class="fleet-grid" id="fleetGrid"><!-- cars rendered by script.js --></div>
+    </div>
+  </section>
+
+  <!-- ===== About ===== -->
+  <section class="section section-alt" id="about">
+    <div class="container about-grid">
+      <div class="about-media">
+        <img src="images/showroom.jpg" alt="Gemzo Car Rental showroom in Ein Misbah, Ramallah" loading="lazy">
+        <div class="about-badge">
+          <img src="images/logo-dark.png" alt="">
+          <span data-i18n="about.badge">Ramallah's trusted car rental</span>
+        </div>
+      </div>
+      <div class="about-text">
+        <h2 class="section-title" data-i18n="about.title">About Gemzo</h2>
+        <p data-i18n="about.p1">Gemzo Car Rental is a car rental company based in Ein Misbah, Ramallah. We offer a clean, modern and well-maintained fleet for personal trips, business travel, weddings and visitors to Palestine.</p>
+        <p data-i18n="about.p2">Our goal is simple: a great car, a fair price and fast, friendly service from the first message to the moment you return the keys.</p>
+        <div class="stats">
+          <div class="stat"><span class="stat-num">+500</span><span class="stat-label" data-i18n="about.s1">Happy customers</span></div>
+          <div class="stat"><span class="stat-num">+20</span><span class="stat-label" data-i18n="about.s2">Cars in the fleet</span></div>
+          <div class="stat"><span class="stat-num">24/7</span><span class="stat-label" data-i18n="about.s3">Customer support</span></div>
+        </div>
+        <ul class="checks">
+          <li data-i18n="about.c1">Clean, sanitized cars checked before every rental</li>
+          <li data-i18n="about.c2">Clear prices with no hidden fees</li>
+          <li data-i18n="about.c3">Flexible pickup and return times</li>
+        </ul>
+      </div>
+    </div>
+  </section>
+
+  <!-- ===== Booking ===== -->
+  <section class="section" id="booking">
+    <div class="container booking-grid">
+      <div class="booking-info">
+        <h2 class="section-title" data-i18n="book.title">Book Your Car</h2>
+        <p class="section-sub" data-i18n="book.sub">Fill in the form and we'll receive your request directly on WhatsApp. We confirm availability within minutes.</p>
+        <ol class="steps">
+          <li><span>1</span><div><strong data-i18n="book.s1t">Choose a car</strong><p data-i18n="book.s1d">Pick from our fleet and your dates.</p></div></li>
+          <li><span>2</span><div><strong data-i18n="book.s2t">Send on WhatsApp</strong><p data-i18n="book.s2d">Your request opens in WhatsApp, ready to send.</p></div></li>
+          <li><span>3</span><div><strong data-i18n="book.s3t">Pick up and drive</strong><p data-i18n="book.s3d">Bring your ID and driving license. That's it.</p></div></li>
+        </ol>
+      </div>
+
+      <form class="booking-form" id="bookingForm" novalidate>
+        <div class="form-row">
+          <label><span data-i18n="form.name">Full name</span>
+            <input type="text" name="name" required autocomplete="name" data-i18n-ph="form.namePh" placeholder="Your name">
+          </label>
+          <label><span data-i18n="form.phone">Phone number</span>
+            <input type="tel" name="phone" required autocomplete="tel" placeholder="05X XXX XXXX" dir="ltr">
+          </label>
+        </div>
+        <label><span data-i18n="form.car">Car</span>
+          <select name="car" id="carSelect" required></select>
+        </label>
+        <div class="form-row">
+          <label><span data-i18n="form.pickup">Pickup date</span>
+            <input type="date" name="pickup" required>
+          </label>
+          <label><span data-i18n="form.return">Return date</span>
+            <input type="date" name="return" required>
+          </label>
+        </div>
+        <label><span data-i18n="form.notes">Notes</span>
+          <textarea name="notes" rows="3" data-i18n-ph="form.notesPh" placeholder="Anything we should know?"></textarea>
+        </label>
+        <p class="form-error" id="formError" hidden></p>
+        <button type="submit" class="btn btn-primary btn-block">
+          <svg viewBox="0 0 24 24" class="wa-icon" aria-hidden="true"><path d="M20.5 3.5A11.8 11.8 0 0 0 1.9 17.8L.5 23.5l5.8-1.5A11.8 11.8 0 0 0 20.5 3.5ZM12 21.4a9.6 9.6 0 0 1-4.9-1.3l-.4-.2-3.4.9.9-3.3-.2-.4A9.6 9.6 0 1 1 12 21.4Zm5.3-7.2c-.3-.1-1.7-.8-2-.9-.3-.1-.5-.1-.7.1l-.9 1.1c-.2.2-.3.2-.6.1a7.9 7.9 0 0 1-3.9-3.4c-.3-.5.3-.5.8-1.6.1-.2 0-.4 0-.5l-.9-2.2c-.2-.6-.5-.5-.7-.5h-.6a1.1 1.1 0 0 0-.8.4 3.4 3.4 0 0 0-1 2.5 5.9 5.9 0 0 0 1.2 3.1 13.4 13.4 0 0 0 5.2 4.6c1.9.8 2.7.9 3.6.7a3.1 3.1 0 0 0 2-1.4 2.5 2.5 0 0 0 .2-1.4c-.1-.1-.3-.2-.6-.3Z"/></svg>
+          <span data-i18n="form.submit">Send Booking on WhatsApp</span>
+        </button>
+      </form>
+    </div>
+  </section>
+
+  <!-- ===== FAQ ===== -->
+  <section class="section section-alt" id="faq">
+    <div class="container faq-wrap">
+      <h2 class="section-title center" data-i18n="faq.title">Frequently Asked Questions</h2>
+      <div class="faq-list">
+        <details class="faq-item"><summary data-i18n="faq.q1">What do I need to rent a car?</summary><p data-i18n="faq.a1">A valid ID card or passport and a valid driving license. A deposit may be required depending on the car.</p></details>
+        <details class="faq-item"><summary data-i18n="faq.q2">What is the minimum age to rent?</summary><p data-i18n="faq.a2">Drivers must be at least 21 years old with a license held for at least one year. Some luxury cars require 25+.</p></details>
+        <details class="faq-item"><summary data-i18n="faq.q3">Is insurance included?</summary><p data-i18n="faq.a3">Yes. All our cars are licensed and insured. Ask us about extra coverage options.</p></details>
+        <details class="faq-item"><summary data-i18n="faq.q4">How do I book a car?</summary><p data-i18n="faq.a4">Fill in the booking form on this page or message us on WhatsApp. We confirm availability within minutes, then you pick up the car from our office in Ein Misbah.</p></details>
+        <details class="faq-item"><summary data-i18n="faq.q5">Do you offer weekly or monthly rentals?</summary><p data-i18n="faq.a5">Yes. Longer rentals get special prices. Message us on WhatsApp for an offer.</p></details>
+        <details class="faq-item"><summary data-i18n="faq.q6">How do I pay?</summary><p data-i18n="faq.a6">Cash or bank transfer when you pick up the car. Contact us for other payment methods.</p></details>
+      </div>
+    </div>
+  </section>
+
+  <!-- ===== Contact ===== -->
+  <section class="section" id="contact">
+    <div class="container">
+      <h2 class="section-title" data-i18n="contact.title">Contact Us</h2>
+      <div class="contact-grid">
+        <div class="contact-cards">
+          <a class="contact-card" href="tel:+970595552277">
+            <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M22 16.9v3a2 2 0 0 1-2.2 2 19.8 19.8 0 0 1-8.6-3.1 19.5 19.5 0 0 1-6-6A19.8 19.8 0 0 1 2.1 4.2 2 2 0 0 1 4.1 2h3a2 2 0 0 1 2 1.7c.1 1 .4 1.9.7 2.8a2 2 0 0 1-.5 2.1L8 9.9a16 16 0 0 0 6 6l1.3-1.3a2 2 0 0 1 2.1-.4c.9.3 1.8.6 2.8.7a2 2 0 0 1 1.7 2Z"/></svg>
+            <div><span data-i18n="contact.phone">Call us</span><strong dir="ltr">059 555 2277</strong></div>
+          </a>
+          <a class="contact-card" href="tel:+970592031003">
+            <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M22 16.9v3a2 2 0 0 1-2.2 2 19.8 19.8 0 0 1-8.6-3.1 19.5 19.5 0 0 1-6-6A19.8 19.8 0 0 1 2.1 4.2 2 2 0 0 1 4.1 2h3a2 2 0 0 1 2 1.7c.1 1 .4 1.9.7 2.8a2 2 0 0 1-.5 2.1L8 9.9a16 16 0 0 0 6 6l1.3-1.3a2 2 0 0 1 2.1-.4c.9.3 1.8.6 2.8.7a2 2 0 0 1 1.7 2Z"/></svg>
+            <div><span data-i18n="contact.phone">Call us</span><strong dir="ltr">059 203 1003</strong></div>
+          </a>
+          <a class="contact-card" href="https://wa.me/970595552277" target="_blank" rel="noopener">
+            <svg viewBox="0 0 24 24" class="fill" aria-hidden="true"><path d="M20.5 3.5A11.8 11.8 0 0 0 1.9 17.8L.5 23.5l5.8-1.5A11.8 11.8 0 0 0 20.5 3.5ZM12 21.4a9.6 9.6 0 0 1-4.9-1.3l-.4-.2-3.4.9.9-3.3-.2-.4A9.6 9.6 0 1 1 12 21.4Z"/></svg>
+            <div><span data-i18n="contact.wa">WhatsApp</span><strong dir="ltr">+970 59 555 2277</strong></div>
+          </a>
+          <div class="contact-card">
+            <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M12 21s-7-6.2-7-11a7 7 0 0 1 14 0c0 4.8-7 11-7 11Z"/><circle cx="12" cy="10" r="2.5"/></svg>
+            <div><span data-i18n="contact.address">Address</span><strong data-i18n="contact.addr">Ramallah - Ein Misbah - Main Street - Bastami Complex</strong></div>
+          </div>
+          <div class="contact-card">
+            <svg viewBox="0 0 24 24" aria-hidden="true"><circle cx="12" cy="12" r="9"/><path d="M12 7v5l3 2"/></svg>
+            <div><span data-i18n="contact.hours">Working hours</span><strong data-i18n="contact.hoursVal">Every day, 8:00 AM - 10:00 PM</strong></div>
+          </div>
+        </div>
+        <div class="map-wrap">
+          <iframe title="Gemzo Car Rental location" src="https://maps.google.com/maps?q=31.909527,35.203678&z=17&output=embed" loading="lazy" referrerpolicy="no-referrer-when-downgrade" allowfullscreen></iframe>
+          <a class="btn btn-outline btn-sm map-btn" href="https://www.google.com/maps/search/?api=1&query=31.909527,35.203678" target="_blank" rel="noopener" data-i18n="contact.directions">Get Directions</a>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ===== Footer ===== -->
+  <footer class="footer">
+    <div class="container footer-grid">
+      <div class="footer-brand">
+        <img src="images/logo-dark.png" alt="Gemzo Car Rental" class="footer-logo">
+        <p data-i18n="footer.about">Premium car rental in Ramallah. Luxury SUVs, convertibles and wedding cars.</p>
+        <div class="socials">
+          <a href="https://www.facebook.com/share/1Qq6vz23ZJ/" target="_blank" rel="noopener" aria-label="Facebook">
+            <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M14 8h3V4h-3a4 4 0 0 0-4 4v2H8v4h2v8h4v-8h3l1-4h-4V8.5c0-.3.2-.5.5-.5Z"/></svg>
+          </a>
+          <a href="https://wa.me/970595552277" target="_blank" rel="noopener" aria-label="WhatsApp">
+            <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M20.5 3.5A11.8 11.8 0 0 0 1.9 17.8L.5 23.5l5.8-1.5A11.8 11.8 0 0 0 20.5 3.5ZM12 21.4a9.6 9.6 0 0 1-4.9-1.3l-.4-.2-3.4.9.9-3.3-.2-.4A9.6 9.6 0 1 1 12 21.4Z"/></svg>
+          </a>
+          <a href="tel:+970595552277" aria-label="Phone">
+            <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M22 16.9v3a2 2 0 0 1-2.2 2 19.8 19.8 0 0 1-8.6-3.1 19.5 19.5 0 0 1-6-6A19.8 19.8 0 0 1 2.1 4.2 2 2 0 0 1 4.1 2h3a2 2 0 0 1 2 1.7c.1 1 .4 1.9.7 2.8a2 2 0 0 1-.5 2.1L8 9.9a16 16 0 0 0 6 6l1.3-1.3a2 2 0 0 1 2.1-.4c.9.3 1.8.6 2.8.7a2 2 0 0 1 1.7 2Z"/></svg>
+          </a>
+        </div>
+      </div>
+      <div>
+        <h4 data-i18n="footer.links">Quick Links</h4>
+        <ul class="footer-links">
+          <li><a href="#fleet" data-i18n="nav.fleet">Fleet</a></li>
+          <li><a href="#about" data-i18n="nav.about">About</a></li>
+          <li><a href="#booking" data-i18n="nav.booking">Booking</a></li>
+          <li><a href="#faq" data-i18n="nav.faq">FAQ</a></li>
+        </ul>
+      </div>
+      <div>
+        <h4 data-i18n="footer.contact">Contact</h4>
+        <ul class="footer-links">
+          <li><a href="tel:+970595552277" dir="ltr">0595552277</a></li>
+          <li><a href="tel:+970592031003" dir="ltr">0592031003</a></li>
+          <li data-i18n="contact.addr">Ramallah - Ein Misbah - Main Street - Bastami Complex</li>
+          <li><a href="https://www.facebook.com/share/1Qq6vz23ZJ/" target="_blank" rel="noopener" data-i18n="footer.fb">Follow us on Facebook</a></li>
+        </ul>
+      </div>
+    </div>
+    <div class="footer-bottom">
+      <div class="container">© <span id="year"></span> Gemzo Car Rental · <span data-i18n="footer.rights">All rights reserved.</span></div>
+    </div>
+  </footer>
+
+  <!-- Floating WhatsApp -->
+  <a href="https://wa.me/970595552277" class="wa-float" target="_blank" rel="noopener" aria-label="WhatsApp">
+    <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M20.5 3.5A11.8 11.8 0 0 0 1.9 17.8L.5 23.5l5.8-1.5A11.8 11.8 0 0 0 20.5 3.5ZM12 21.4a9.6 9.6 0 0 1-4.9-1.3l-.4-.2-3.4.9.9-3.3-.2-.4A9.6 9.6 0 1 1 12 21.4Zm5.3-7.2c-.3-.1-1.7-.8-2-.9-.3-.1-.5-.1-.7.1l-.9 1.1c-.2.2-.3.2-.6.1a7.9 7.9 0 0 1-3.9-3.4c-.3-.5.3-.5.8-1.6.1-.2 0-.4 0-.5l-.9-2.2c-.2-.6-.5-.5-.7-.5h-.6a1.1 1.1 0 0 0-.8.4 3.4 3.4 0 0 0-1 2.5 5.9 5.9 0 0 0 1.2 3.1 13.4 13.4 0 0 0 5.2 4.6c1.9.8 2.7.9 3.6.7a3.1 3.1 0 0 0 2-1.4 2.5 2.5 0 0 0 .2-1.4c-.1-.1-.3-.2-.6-.3Z"/></svg>
+  </a>
+
+  <script src="script.js"></script>
+</body>
+</html>
